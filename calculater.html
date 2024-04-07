@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater😎</title>
+    <style>
+        .container{
+            width: 23%;
+            margin: auto;
+            margin-top: 5%;
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            border-radius: 10px;
+        }
+        h1{
+            font-family: sans-serif;
+            
+        }
+        input{
+            padding: 10px ;
+            border-radius: 20px;
+            box-shadow: 5px 5px 4px orange;
+            font-size: 24px;
+            font-family: sans-serif;
+        }
+        button{
+            padding: 10px;
+            font-size: 24px;
+            border-radius: 20px;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;  
+        }
+        h2{
+            font-size: 36px;
+            font-family: sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        .add:hover{
+            background-color: limegreen;
+            color: white;
+            border: none;
+        }
+        .sub:hover{
+            background-color: cornflowerblue;
+            color: white;
+            border: none;
+        }
+        .mult:hover{
+            background-color:grey ;
+            color: white;
+            border: none;
+        }
+        .divide:hover{
+            background-color:tomato ;
+            color: white;
+            border: none;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>😎Rahul Calculater😎</h1>
+    <input type="text" id="item1">
+    <input type="text" id="item2">
+    <button class="add">Addition</button>
+    <button class="sub">Subtraction</button> 
+    <button class="mult">Multiplay</button> 
+    <button class="divide">Divide</button>  
+</div>
+
+</body>
+<script>
+    let container=document.querySelector(".container")
+    let input1=document.getElementById("item1")
+    let input2=document.getElementById("item2")
+    let addition=document.querySelector(".add")
+    let Subtraction=document.querySelector(".sub")
+    let mutiplay=document.querySelector(".mult")
+    let divide=document.querySelector(".divide")
+    let h2=document.createElement("h2")
+    
+
+
+    addition.addEventListener("click" ,()=>{
+        let firstValue=parseInt(input1.value);
+        input1.value='';
+        let secondValue=parseInt(input2.value);
+        input2.value='';
+
+        let result=firstValue +secondValue
+        h2.innerText="🕺"+result
+        
+        container.append(h2)
+    })
+
+    Subtraction.addEventListener("click",()=>{
+        let firstValue=parseInt(input1.value);
+        input1.value="";
+        let secondValue=parseInt(input2.value);
+        input2.value="";
+        let result=firstValue -secondValue;
+        h2.innerText="🤫"+result;
+        container.append(h2)
+
+    })
+
+    mutiplay.addEventListener("click",()=>{
+        let firstValue=parseInt(input1.value);
+        input1.value="";
+        let secondValue=parseInt(input2.value);
+        input2.value="";
+        let result=firstValue+secondValue;
+        h2.innerText="🫡"+result;
+        container.append(h2)
+    })
+
+    divide.addEventListener("click",()=>{
+        let firstValue=parseInt(input1.value);
+        input1.value="";
+        let secondValue=parseInt(input2.value);
+        input2.value="";
+        let result=firstValue/secondValue;
+        h2.innerText="🧐"+result;
+        container.append(h2)
+    })
+</script>
+</html>
